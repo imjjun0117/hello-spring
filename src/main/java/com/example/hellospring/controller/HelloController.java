@@ -2,14 +2,24 @@ package com.example.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloController {
 
     @GetMapping("hello")
-    public String hello(Model model){
+    public String hello(ModelMap model){
         model.addAttribute("data","hello!");
         return "hello";
     }
+
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam("name") String name, Model model){
+        model.addAttribute("name",name);
+
+        return "hello-template";
+    }
+
 }
