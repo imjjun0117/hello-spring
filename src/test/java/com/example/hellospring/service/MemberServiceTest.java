@@ -64,6 +64,7 @@ class MemberServiceTest {
             assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다. 123123");
         }
         */
+
         //위에 테스트를 더 간단하게 수행하기 위해 제공되는 것이 있음
         IllegalStateException e = assertThrows(IllegalStateException.class, ()-> memberService.join(member2));
 

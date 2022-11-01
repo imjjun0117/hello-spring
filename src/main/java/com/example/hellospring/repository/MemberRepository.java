@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-
 public interface MemberRepository {
     // 데이터 저장소가 선정되지 않아 우선, 리포지토리는 인터페이스로 구현 클래스를 변경할 수 있도록 설계
     // 데이터 저장소는 RDB, NoSQL 등등 다양한 저장소를 고민중인 상황으로 가정
